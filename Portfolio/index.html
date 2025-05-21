@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratik Pokharel – Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="topnav">
+    <div class="container">
+      <h1>Pratik Pokharel</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="section center">
+    <h2>Hi, I’m <span class="accent">Pratik</span> – bridging <span class="accent">Accounting</span> &amp; <span class="accent">Tech</span></h2>
+    <p class="lead">Data-driven junior at ULM • Python &amp; SQL enthusiast • Future CPA • Cat mom 🐾</p>
+    <div class="cta-row">
+      <a href="#projects" class="btn primary">See my work</a>
+      <a href="#contact" class="btn secondary">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container two-col">
+      <img src="/static/profile.jpg" alt="Portrait" class="portrait" />
+      <div>
+        <h3>About Me</h3>
+        <p>I’m passionate about turning messy data into meaningful insights. Whether normalising an archaic Great Plains BOM, automating cost allocations, or visualising travel itineraries, I love projects that blend technical rigour with real-world impact.</p>
+        <p>Outside of code and debits, you’ll find me hiking trails, experimenting with Nepali‑Texan fusion recipes, or chasing my two cats, Michan &amp; Kio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="container">
+      <h3 class="center">Projects</h3>
+      <div class="grid">
+        {% for p in projects %}
+        <article class="card">
+          <h4>{{ p.title }}</h4>
+          <p>{{ p.description }}</p>
+          <ul class="tech-list">
+            {% for t in p.tech %}<li>{{ t }}</li>{% endfor %}
+          </ul>
+          <div class="links">
+            {% if p.repo %}<a href="{{ p.repo }}" target="_blank">GitHub →</a>{% endif %}
+            {% if p.demo %}<a href="{{ p.demo }}" target="_blank">Demo →</a>{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h3 class="center">Tech &amp; Tools</h3>
+      <ul class="skill-tags center">
+        <li>Python</li><li>SQL (MySQL / SQL Server)</li><li>React / Next.js</li><li>Tableau</li><li>AWS</li><li>Tailwind CSS</li><li>Git & GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container narrow">
+      <h3 class="center">Let’s Connect</h3>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <p class="flash">{{ messages[0] }}</p>
+        {% endif %}
+      {% endwith %}
+
+      <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn primary full">Send Message</button>
+      </form>
+
+      <div class="social center">
+        <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="center small">
+    © {{ now.year }} Pratik Pokharel. Built with ❤️ & Flask.
+  </footer>
+</body>
+</html>
