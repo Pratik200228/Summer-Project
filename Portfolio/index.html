@@ -1,101 +1,340 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pratik Pokharel – Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Pratik Pokharel – Senior Computer Science major at ULM. Portfolio showcasing design, front-end development, and data-driven projects." />
+
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="favicon.ico" />
+
+
 </head>
 <body>
-  <header id="topnav">
+  <!-- Skip link for keyboard users -->
+  <a class="visually-hidden focusable" href="#main">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header id="topnav" role="banner">
     <div class="container">
       <h1>Pratik Pokharel</h1>
-      <nav>
+      <nav role="navigation">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#skills">Skill</a>
         <a href="#contact">Contact</a>
       </nav>
+      <!-- Optional: mobile hamburger icon could go here -->
     </div>
   </header>
 
-  <section id="hero" class="section center">
-    <h2>Hi, I’m <span class="accent">Pratik</span> – bridging <span class="accent">Accounting</span> &amp; <span class="accent">Tech</span></h2>
-    <p class="lead">Data-driven junior at ULM • Python &amp; SQL enthusiast • Future CPA • Cat mom 🐾</p>
-    <div class="cta-row">
-      <a href="#projects" class="btn primary">See my work</a>
-      <a href="#contact" class="btn secondary">Get in touch</a>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container two-col">
-      <img src="/static/profile.jpg" alt="Portrait" class="portrait" />
-      <div>
-        <h3>About Me</h3>
-        <p>I’m passionate about turning messy data into meaningful insights. Whether normalising an archaic Great Plains BOM, automating cost allocations, or visualising travel itineraries, I love projects that blend technical rigour with real-world impact.</p>
-        <p>Outside of code and debits, you’ll find me hiking trails, experimenting with Nepali‑Texan fusion recipes, or chasing my two cats, Michan &amp; Kio.</p>
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="section center" role="region" aria-labelledby="hero-heading">
+      <h2 id="hero-heading">
+        Hi, I’m <span class="accent">Pratik</span> – Senior Computer Science Major
+      </h2>
+      <p class="lead">
+        Vice President – Cultural Affairs at NSA ULM • Java &amp; React.js Enthusiast • Visual Communicator
+      </p>
+      <div class="cta-row">
+        <a href="#about" class="btn primary">Learn About Me</a>
+        <a href="#projects" class="btn secondary">See My Work</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="section alt">
-    <div class="container">
-      <h3 class="center">Projects</h3>
-      <div class="grid">
-        {% for p in projects %}
-        <article class="card">
-          <h4>{{ p.title }}</h4>
-          <p>{{ p.description }}</p>
-          <ul class="tech-list">
-            {% for t in p.tech %}<li>{{ t }}</li>{% endfor %}
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="section" role="region" aria-labelledby="about-heading">
+      <div class="container two-col">
+        <img
+          src="{{ url_for('static', filename='profile.jpg') }}"
+          alt="Portrait of Pratik Pokharel"
+          class="portrait"
+          loading="lazy"
+        />
+        <div>
+          <h3 id="about-heading">About Me</h3>
+          <p>
+            I’m a senior pursuing a Bachelor of Science in Computer Science at
+            the University of Louisiana at Monroe (expected May 2026). I have a
+            strong foundation in data structures, algorithms, and front-end
+            development. I currently serve as Vice President – Cultural Affairs
+            for the Nepalese Student Association, where I lead event planning,
+            design, and digital communication. I’m proficient in Java and
+            React.js, and I enjoy collaborating on creative, high-impact
+            projects.
+          </p>
+          <p>
+            Outside of class, I design UI mockups for hackathons, create
+            engaging social-media campaigns, and explore new tools in Figma
+            and Adobe Creative Suite.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="section alt" role="region" aria-labelledby="experience-heading">
+      <div class="container">
+        <h3 id="experience-heading" class="center">Experience</h3>
+
+        <!-- Google Developers Students Club -->
+        <div class="experience-item">
+          <h4>Google Developers Students Club</h4>
+          <p class="date">June 2023 – Present</p>
+          <ul>
+            <li>Produced event banners, social-media creatives, and slide templates for technical workshops.</li>
+            <li>Partnered with guest speakers (e.g., IBM engineers) to develop branded presentation materials that enhanced audience engagement and learning.</li>
+            <li>Participated in panel discussions to stay current with industry best practices and emerging technologies.</li>
           </ul>
-          <div class="links">
-            {% if p.repo %}<a href="{{ p.repo }}" target="_blank">GitHub →</a>{% endif %}
-            {% if p.demo %}<a href="{{ p.demo }}" target="_blank">Demo →</a>{% endif %}
+        </div>
+
+        <!-- ULM Hawkathon -->
+        <div class="experience-item">
+          <h4>ULM Hawkathon</h4>
+          <p class="date">April 2024</p>
+          <ul>
+            <li>Designed UI mockups, icons, and marketing graphics for a “Digital ID” React prototype under a 24-hour deadline.</li>
+            <li>Integrated design assets into the React-based prototype, improving usability and visual appeal for judges and sponsors.</li>
+          </ul>
+        </div>
+
+        <!-- Nepalese Student Association – ULM -->
+        <div class="experience-item">
+          <h4>Nepalese Student Association – University of Louisiana at Monroe</h4>
+          <p class="date">Aug 2023 – Present</p>
+          <ul>
+            <li>
+              <strong>Vice President – Cultural Affairs</strong> (May 2025 – May 2026)
+              <ul>
+                <li>Led planning and execution of cultural events, collaborating with campus organizations to enhance diversity and engagement.</li>
+                <li>Coordinated with the executive board and faculty advisors to oversee budgets, logistics, and ensure all digital/printed assets matched brand guidelines.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Public Relations Officer</strong> (Aug 2023 – May 2024)
+              <ul>
+                <li>Developed and implemented PR strategies that boosted membership by 60% within six months.</li>
+                <li>Created 20+ custom posters, event flyers, social-media graphics, and banners using Adobe Illustrator and Canva.</li>
+                <li>Managed all social-media platforms (Instagram: <code>nsa.ulm</code>), crafting engaging content and growing followers by 300+.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="section" role="region" aria-labelledby="projects-heading">
+      <div class="container">
+        <h3 id="projects-heading" class="center">Projects</h3>
+        <div class="grid">
+          {%- for p in projects %}
+          <article class="card">
+            <h4>{{ p.title }}</h4>
+            <p>{{ p.description }}</p>
+            <ul class="tech-list">
+              {%- for t in p.tech %}
+              <li>{{ t }}</li>
+              {%- endfor %}
+            </ul>
+            <div class="links">
+              {%- if p.repo %}
+              <a href="{{ p.repo }}" target="_blank" rel="noopener">GitHub →</a>
+              {%- endif %}
+              {%- if p.demo %}
+              <a href="{{ p.demo }}" target="_blank" rel="noopener">Demo →</a>
+              {%- endif %}
+            </div>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILL SECTION (Tabbed) ===== -->
+    <section id="skills" class="section alt" role="region" aria-labelledby="skills-heading">
+      <div class="container">
+        <h3 id="skills-heading" class="center">Skill</h3>
+
+        <!-- Tabs Navigation -->
+        <ul class="tabs">
+          <li class="tab-item active" data-target="languages">Languages</li>
+          <li class="tab-item" data-target="frameworks">Frameworks</li>
+          <li class="tab-item" data-target="devops">DevOps</li>
+        </ul>
+
+        <!-- Tab Panes -->
+        <div class="tab-content">
+          <!-- LANGUAGES Pane -->
+          <div class="tab-pane active" id="languages">
+            <div class="card-grid">
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/css3.png') }}" alt="CSS icon" class="skill-icon" />
+                <span>CSS</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/javascript.png') }}" alt="JavaScript icon" class="skill-icon" />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/sql.png') }}" alt="SQL icon" class="skill-icon" />
+                <span>SQL</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/python.png') }}" alt="Python icon" class="skill-icon" />
+                <span>Python</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/php.png') }}" alt="PHP icon" class="skill-icon" />
+                <span>PHP</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/csharp.png') }}" alt="C# icon" class="skill-icon" />
+                <span>C#</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/java.png') }}" alt="Java icon" class="skill-icon" />
+                <span>Java</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/vbnet.png') }}" alt="VB.NET icon" class="skill-icon" />
+                <span>VB.NET</span>
+              </div>
+            </div>
           </div>
-        </article>
-        {% endfor %}
+
+          <!-- FRAMEWORKS Pane -->
+          <div class="tab-pane" id="frameworks">
+            <div class="card-grid">
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/react.png') }}" alt="React icon" class="skill-icon" />
+                <span>React</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/nextjs.png') }}" alt="Next.js icon" class="skill-icon" />
+                <span>Next.js</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/bootstrap.png') }}" alt="Bootstrap icon" class="skill-icon" />
+                <span>Bootstrap</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/tailwind.png') }}" alt="Tailwind CSS icon" class="skill-icon" />
+                <span>Tailwind CSS</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/django.png') }}" alt="Django icon" class="skill-icon" />
+                <span>Django</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/express.png') }}" alt="Express.js icon" class="skill-icon" />
+                <span>Express.js</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/jquery.png') }}" alt="jQuery icon" class="skill-icon" />
+                <span>jQuery</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/ruby-on-rails.png') }}" alt="Rails icon" class="skill-icon" />
+                <span>Rails</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DEVOPS Pane -->
+          <div class="tab-pane" id="devops">
+            <div class="card-grid">
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/git.png') }}" alt="Git icon" class="skill-icon" />
+                <span>Git</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/github-actions.png') }}" alt="GitHub Actions icon" class="skill-icon" />
+                <span>GitHub Actions</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/docker.png') }}" alt="Docker icon" class="skill-icon" />
+                <span>Docker</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/aws.png') }}" alt="AWS icon" class="skill-icon" />
+                <span>AWS</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/azure.png') }}" alt="Azure icon" class="skill-icon" />
+                <span>Azure</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/jenkins.png') }}" alt="Jenkins icon" class="skill-icon" />
+                <span>Jenkins</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/kubernetes.png') }}" alt="Kubernetes icon" class="skill-icon" />
+                <span>Kubernetes</span>
+              </div>
+              <div class="skill-card">
+                <img src="{{ url_for('static', filename='icons/terraform.png') }}" alt="Terraform icon" class="skill-icon" />
+                <span>Terraform</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" class="section">
-    <div class="container">
-      <h3 class="center">Tech &amp; Tools</h3>
-      <ul class="skill-tags center">
-        <li>Python</li><li>SQL (MySQL / SQL Server)</li><li>React / Next.js</li><li>Tableau</li><li>AWS</li><li>Tailwind CSS</li><li>Git & GitHub</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact" class="section alt">
-    <div class="container narrow">
-      <h3 class="center">Let’s Connect</h3>
-
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          <p class="flash">{{ messages[0] }}</p>
-        {% endif %}
-      {% endwith %}
-
-      <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Message" rows="5" required></textarea>
-        <button type="submit" class="btn primary full">Send Message</button>
-      </form>
-
-      <div class="social center">
-        <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>
+    <!-- ===== CONTACT SECTION (ICONS ONLY) ===== -->
+    <section id="contact" class="section alt" role="region" aria-labelledby="contact-heading">
+      <div class="container narrow center">
+        <h3 id="contact-heading">Let’s Connect</h3>
+        <p class="contact-text">Feel free to reach out or connect with me:</p>
+        <div class="contact-icons">
+          <!-- Email -->
+          <a href="mailto:pokharelp@warhawks.ulm.edu" class="icon-link" aria-label="Email Pratik">
+            <img src="{{ url_for('static', filename='icons/email.svg') }}" alt="" class="contact-icon" />
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/Pratik200228" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub Profile">
+            <img src="{{ url_for('static', filename='icons/github.svg') }}" alt="" class="contact-icon" />
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/pratik-pokharel-128747266/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn Profile">
+            <img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="" class="contact-icon" />
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="center small">
+  <!-- ========== FOOTER ========== -->
+  <footer role="contentinfo" class="center small">
     © {{ now.year }} Pratik Pokharel. Built with ❤️ & Flask.
   </footer>
+
+  <!-- ===== Optional JS for Tabs ===== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll(".tabs .tab-item");
+      const panes = document.querySelectorAll(".tab-pane");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          // Remove “active” from all tabs and panes
+          tabs.forEach(t => t.classList.remove("active"));
+          panes.forEach(p => p.classList.remove("active"));
+
+          // Activate the clicked tab
+          tab.classList.add("active");
+          const targetID = tab.getAttribute("data-target");
+          document.getElementById(targetID).classList.add("active");
+        });
+      });
+    });
+  </script>
 </body>
 </html>
