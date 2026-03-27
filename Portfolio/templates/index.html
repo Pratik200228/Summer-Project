@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratik Pokharel – Portfolio</title>
+  <meta name="description" content="Pratik Pokharel – Senior Computer Science major at ULM. Portfolio showcasing design, front-end development, and data-driven projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ══════════════ NAVIGATION ══════════════ -->
+  <header id="topnav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">Pratik Pokharel</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Open navigation menu" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Close menu">&times;</button>
+    <a href="#about"      class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects"   class="mobile-link">Projects</a>
+    <a href="#skills"     class="mobile-link">Skills</a>
+    <a href="#contact"    class="mobile-link">Contact</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for Opportunities
+        </div>
+        <h1>Hi, I'm <span class="gradient-text">Pratik</span></h1>
+        <p class="hero-role"><span id="typewriter"></span><span class="cursor"></span></p>
+        <p class="hero-description">
+          Vice President – Cultural Affairs at NSA ULM &nbsp;·&nbsp;
+          Java &amp; React.js Enthusiast &nbsp;·&nbsp; Visual Communicator
+        </p>
+        <div class="cta-row">
+          <a href="#about"    class="btn btn-primary">Learn About Me</a>
+          <a href="#projects" class="btn btn-secondary">See My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About Me</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Passionate developer · Creative designer · Community leader</p>
+        <div class="about-grid">
+
+          <div class="avatar-wrapper reveal reveal-delay-2">
+            <div class="avatar">PP</div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">60%</div>
+                <div class="stat-label">Membership Growth</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">300+</div>
+                <div class="stat-label">Social Followers</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Designs Created</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text reveal reveal-delay-3">
+            <h3 class="about-heading">Who am I?</h3>
+            <p>
+              I'm a senior pursuing a Bachelor of Science in Computer Science at the
+              University of Louisiana at Monroe (expected May 2026). I have a strong
+              foundation in data structures, algorithms, and front-end development.
+            </p>
+            <p>
+              I currently serve as Vice President – Cultural Affairs for the Nepalese
+              Student Association, where I lead event planning, design, and digital
+              communication. I'm proficient in Java and React.js, and I enjoy
+              collaborating on creative, high-impact projects.
+            </p>
+            <p>
+              Outside of class, I design UI mockups for hackathons, create engaging
+              social-media campaigns, and explore new tools in Figma and Adobe
+              Creative Suite.
+            </p>
+            <div class="about-tags">
+              <span class="tag">🎓 ULM – CS Senior</span>
+              <span class="tag">💻 Full-Stack Dev</span>
+              <span class="tag">🎨 UI/UX Design</span>
+              <span class="tag">⚛️ React.js</span>
+              <span class="tag">☕ Java</span>
+              <span class="tag">🏆 VP Cultural Affairs</span>
+              <span class="tag">🐍 Python</span>
+              <span class="tag">🖌️ Figma</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ EXPERIENCE ══════════════ -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+        <p class="section-subtitle reveal reveal-delay-1">My journey in tech, design &amp; leadership</p>
+        <div class="timeline">
+
+          <!-- Google Developers Students Club -->
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h4>Google Developers Students Club</h4>
+                <span class="timeline-date">June 2023 – Present</span>
+              </div>
+              <ul>
+                <li>Produced event banners, social-media creatives, and slide templates for technical workshops.</li>
+                <li>Partnered with guest speakers (e.g., IBM engineers) to develop branded presentation materials that enhanced audience engagement and learning.</li>
+                <li>Participated in panel discussions to stay current with industry best practices and emerging technologies.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ULM Hawkathon -->
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h4>ULM Hawkathon</h4>
+                <span class="timeline-date">April 2024</span>
+              </div>
+              <ul>
+                <li>Designed UI mockups, icons, and marketing graphics for a "Digital ID" React prototype under a 24-hour deadline.</li>
+                <li>Integrated design assets into the React-based prototype, improving usability and visual appeal for judges and sponsors.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- NSA ULM – VP -->
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h4>Nepalese Student Association – ULM</h4>
+                <span class="timeline-date">May 2025 – May 2026</span>
+              </div>
+              <p class="role-badge">Vice President – Cultural Affairs</p>
+              <ul>
+                <li>Led planning and execution of cultural events, collaborating with campus organizations to enhance diversity and engagement.</li>
+                <li>Coordinated with the executive board and faculty advisors to oversee budgets, logistics, and ensure all digital/printed assets matched brand guidelines.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- NSA ULM – PR Officer -->
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h4>Nepalese Student Association – ULM</h4>
+                <span class="timeline-date">Aug 2023 – May 2024</span>
+              </div>
+              <p class="role-badge">Public Relations Officer</p>
+              <ul>
+                <li>Developed and implemented PR strategies that boosted membership by 60% within six months.</li>
+                <li>Created 20+ custom posters, event flyers, social-media graphics, and banners using Adobe Illustrator and Canva.</li>
+                <li>Managed all social-media platforms (Instagram: <code>nsa.ulm</code>), crafting engaging content and growing followers by 300+.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Things I've built and shipped</p>
+        <div class="projects-grid">
+          {%- for p in projects %}
+          <article class="project-card reveal">
+            <div class="project-card-accent"></div>
+            <div class="project-card-body">
+              <h4>{{ p.title }}</h4>
+              <p>{{ p.description }}</p>
+              <ul class="tech-list">
+                {%- for t in p.tech %}
+                <li>{{ t }}</li>
+                {%- endfor %}
+              </ul>
+              <div class="project-links">
+                {%- if p.repo %}
+                <a href="{{ p.repo }}" target="_blank" rel="noopener" class="project-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  GitHub
+                </a>
+                {%- endif %}
+                {%- if p.demo %}
+                <a href="{{ p.demo }}" target="_blank" rel="noopener" class="project-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+                {%- endif %}
+              </div>
+            </div>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SKILLS ══════════════ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Technologies I work with</p>
+
+        <ul class="tabs reveal reveal-delay-2">
+          <li class="tab-item active" data-target="languages">Languages</li>
+          <li class="tab-item" data-target="frameworks">Frameworks</li>
+          <li class="tab-item" data-target="devops">DevOps</li>
+        </ul>
+
+        <div class="tab-content">
+
+          <!-- LANGUAGES -->
+          <div class="tab-pane active" id="languages">
+            <div class="skills-grid">
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon" /><span>CSS</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon" /><span>JavaScript</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="SQL" class="skill-icon" /><span>SQL</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-icon" /><span>Python</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="skill-icon" /><span>PHP</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon" /><span>C#</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="skill-icon" /><span>Java</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" alt="VB.NET" class="skill-icon" /><span>VB.NET</span></div>
+            </div>
+          </div>
+
+          <!-- FRAMEWORKS -->
+          <div class="tab-pane" id="frameworks">
+            <div class="skills-grid">
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="skill-icon" /><span>React</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" class="skill-icon skill-invert" /><span>Next.js</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon" /><span>Bootstrap</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="skill-icon" /><span>Tailwind CSS</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django" class="skill-icon skill-invert" /><span>Django</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express.js" class="skill-icon skill-invert" /><span>Express.js</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" alt="jQuery" class="skill-icon" /><span>jQuery</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-original-wordmark.svg" alt="Rails" class="skill-icon skill-invert" /><span>Rails</span></div>
+            </div>
+          </div>
+
+          <!-- DEVOPS -->
+          <div class="tab-pane" id="devops">
+            <div class="skills-grid">
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="skill-icon" /><span>Git</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" class="skill-icon" /><span>GitHub Actions</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" class="skill-icon" /><span>Docker</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="skill-icon" /><span>AWS</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure" class="skill-icon" /><span>Azure</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins" class="skill-icon" /><span>Jenkins</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes" class="skill-icon" /><span>Kubernetes</span></div>
+              <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform" class="skill-icon" /><span>Terraform</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Let's Connect</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Have a project in mind? I'd love to hear from you.</p>
+        <div class="contact-wrapper">
+
+          <div class="contact-info reveal reveal-delay-2">
+            <h3>Get in touch</h3>
+            <p>I'm always open to discussing new opportunities, collaborations, or just having a conversation about tech and design. My inbox is always open!</p>
+            <div class="social-links">
+              <a href="mailto:pokharelp@warhawks.ulm.edu" class="social-link">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="social-link-text">
+                  <span class="social-link-label">Email</span>
+                  <span class="social-link-value">pokharelp@warhawks.ulm.edu</span>
+                </div>
+              </a>
+              <a href="https://github.com/Pratik200228" target="_blank" rel="noopener" class="social-link">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </div>
+                <div class="social-link-text">
+                  <span class="social-link-label">GitHub</span>
+                  <span class="social-link-value">Pratik200228</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/pratik-pokharel-128747266/" target="_blank" rel="noopener" class="social-link">
+                <div class="social-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </div>
+                <div class="social-link-text">
+                  <span class="social-link-label">LinkedIn</span>
+                  <span class="social-link-value">Pratik Pokharel</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-3">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for msg in messages %}
+                  <div class="flash-msg">✅ {{ msg }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            <form action="/contact" method="POST" class="contact-form">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Your Message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="container">
+      <p>© {{ now.year }} <span class="footer-accent">Pratik Pokharel</span>. Built with ❤️ &amp; Flask.</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════ JAVASCRIPT ══════════════ -->
+  <script>
+    // ── Scroll progress bar
+    const progressBar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+      const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
+
+    // ── Navigation: scrolled class + active link highlighting
+    const topnav = document.getElementById('topnav');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      topnav.classList.toggle('scrolled', window.scrollY > 50);
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 130) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }, { passive: true });
+
+    // ── Mobile hamburger menu
+    const hamburger  = document.getElementById('hamburger-btn');
+    const mobileNav  = document.getElementById('mobile-nav');
+    const mobileClose = document.getElementById('mobile-close');
+
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+    });
+    const closeMobile = () => {
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+    };
+    mobileClose.addEventListener('click', closeMobile);
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMobile));
+
+    // ── Tab switching
+    document.querySelectorAll('.tab-item').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+
+    // ── Scroll reveal with IntersectionObserver
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // ── Typewriter effect
+    const roles = [
+      'Senior CS Major at ULM',
+      'Full-Stack Developer',
+      'UI/UX Enthusiast',
+      'Java & React.js Developer',
+      'Visual Communicator'
+    ];
+    const tw = document.getElementById('typewriter');
+    let ri = 0, ci = 0, deleting = false;
+    function typewrite() {
+      const word = roles[ri];
+      tw.textContent = deleting ? word.substring(0, ci - 1) : word.substring(0, ci + 1);
+      deleting ? ci-- : ci++;
+      let delay = deleting ? 45 : 75;
+      if (!deleting && ci === word.length)  { delay = 2000; deleting = true; }
+      else if (deleting && ci === 0)        { deleting = false; ri = (ri + 1) % roles.length; delay = 350; }
+      setTimeout(typewrite, delay);
+    }
+    typewrite();
+
+    // ── Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+
+</body>
+</html>
